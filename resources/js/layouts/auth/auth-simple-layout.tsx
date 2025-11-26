@@ -1,6 +1,6 @@
-import AppLogoIcon from '@/components/app-logo-icon';
 import { home } from '@/routes';
 import { Link } from '@inertiajs/react';
+import { Sparkles } from 'lucide-react';
 import { type PropsWithChildren } from 'react';
 
 interface AuthLayoutProps {
@@ -21,11 +21,10 @@ export default function AuthSimpleLayout({
                     <div className="flex flex-col items-center gap-4">
                         <Link
                             href={home()}
-                            className="flex flex-col items-center gap-2 font-medium"
+                            className="flex items-center gap-2 font-semibold text-foreground transition-opacity hover:opacity-80"
                         >
-                            <div className="mb-1 flex h-9 w-9 items-center justify-center rounded-md">
-                                <AppLogoIcon className="size-9 fill-current text-[var(--foreground)] dark:text-white" />
-                            </div>
+                            <Sparkles className="h-8 w-8 text-primary" />
+                            <span className="text-xl">EventVault</span>
                             <span className="sr-only">{title}</span>
                         </Link>
 

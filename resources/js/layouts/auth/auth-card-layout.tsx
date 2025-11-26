@@ -1,4 +1,3 @@
-import AppLogoIcon from '@/components/app-logo-icon';
 import {
     Card,
     CardContent,
@@ -8,6 +7,7 @@ import {
 } from '@/components/ui/card';
 import { home } from '@/routes';
 import { Link } from '@inertiajs/react';
+import { Sparkles } from 'lucide-react';
 import { type PropsWithChildren } from 'react';
 
 export default function AuthCardLayout({
@@ -24,11 +24,10 @@ export default function AuthCardLayout({
             <div className="flex w-full max-w-md flex-col gap-6">
                 <Link
                     href={home()}
-                    className="flex items-center gap-2 self-center font-medium"
+                    className="flex items-center gap-2 self-center font-semibold text-foreground transition-opacity hover:opacity-80"
                 >
-                    <div className="flex h-9 w-9 items-center justify-center">
-                        <AppLogoIcon className="size-9 fill-current text-black dark:text-white" />
-                    </div>
+                    <Sparkles className="h-8 w-8 text-primary" />
+                    <span className="text-xl">EventVault</span>
                 </Link>
 
                 <div className="flex flex-col gap-6">
